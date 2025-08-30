@@ -1,0 +1,158 @@
+:root {
+  --PrimaryColor: #FEFE86 !important;
+  --SecondaryColor: #7C40A0 !important;
+  --TertiaryColor: #1c1c1c !important;
+  --RedColor: #FF3440 !important;
+  --GreenColor: #2AC84C !important;
+  --BackgroundLight: rgba(245, 245, 245, 0.05) !important;
+  --StrokeColor: rgba(255, 255, 255, 0.1) !important;
+  --HoverColor: #9a40ce !important;
+  --SecondaryHoverColor: #3B0860 !important;
+}
+
+.bg-dalton-primary {
+  background-color: var(--PrimaryColor) !important;
+}
+
+.bg-dalton-secondary {
+  background-color: var(--SecondaryColor) !important;
+}
+
+.bg-dalton-tertiary {
+  background-color: var(--TertiaryColor) !important;
+}
+
+.bg-dalton-red {
+  background-color: var(--RedColor) !important;
+}
+
+.bg-dalton-green {
+  background-color: var(--GreenColor) !important;
+}
+
+.bg-dalton-bg-light {
+  background-color: var(--BackgroundLight) !important;
+}
+
+.text-dalton-primary {
+  color: var(--PrimaryColor) !important;
+}
+
+.text-dalton-secondary {
+  color: var(--SecondaryColor) !important;
+}
+
+.text-dalton-tertiary {
+  color: var(--TertiaryColor) !important;
+}
+
+.border-dalton-stroke {
+  border-color: var(--StrokeColor) !important;
+}
+
+/* Fuentes personalizadas */
+@font-face {
+  font-family: 'DaltonLife-Regular';
+  src: url('/fonts/Akrobat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DaltonLife-SemiBold';
+  src: url('/fonts/Akrobat-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DaltonLife-Bold';
+  src: url('/fonts/Akrobat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DaltonLife-ExtraBold';
+  src: url('/fonts/Akrobat-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DaltonLife-Black';
+  src: url('/fonts/Akrobat-Black.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'DaltonLife-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: inherit;
+}
+
+.font-dalton {
+  font-family: 'DaltonLife-Regular', sans-serif !important;
+}
+
+.font-dalton-regular {
+  font-family: 'DaltonLife-Regular', sans-serif !important;
+}
+
+.font-dalton-semibold {
+  font-family: 'DaltonLife-SemiBold', sans-serif !important;
+}
+
+.font-dalton-bold {
+  font-family: 'DaltonLife-Bold', sans-serif !important;
+}
+
+.font-dalton-extrabold {
+  font-family: 'DaltonLife-ExtraBold', sans-serif !important;
+}
+
+.font-dalton-black {
+  font-family: 'DaltonLife-Black', sans-serif !important;
+}
+
+@import "tailwindcss";
+
+html,
+body,
+a,
+button,
+[role="button"],
+[tabindex],
+input,
+select,
+textarea,
+.clickable {
+  cursor: none !important;
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
