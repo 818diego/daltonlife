@@ -60,7 +60,7 @@ const ServerSection: React.FC = () => {
                                 onClick={() => {
                                     window.open('https://cfx.re/join/pmgvj7', '_blank');
                                 }}
-                                className="w-full font-dalton-regular text-gray-300 leading-relaxed text-sm bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10 hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                                className="w-full font-dalton-semibold text-gray-200 uppercase leading-relaxed text-[15px] bg-white/5 backdrop-blur-sm rounded-[4px] p-3 border border-white/10 hover:bg-[#9a40ce] transition-all duration-300 cursor-pointer"
                             >
                                 ¿Ya tienes FiveM? ¡Click aquí para conectar!
                             </button>
