@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import logo from '@/assets/logoBlanco.png';
 
 const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav>
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-[#1c1c1c]/80 backdrop-blur-md transition-all duration-500 ease-in-out ${isScrolled ? 'border-b border-white/20 shadow-lg' : 'border-b border-transparent'}`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center space-x-6">
@@ -25,15 +36,15 @@ const Header: React.FC = () => {
                 Paquetes VIP
               </Link>
               <span className="text-white text-lg">|</span>
-              <Link to="/normativa" className="font-dalton-semibold text-white transition-all duration-300 text-lg uppercase tracking-wide flex items-center gap-2 hover:text-[#FEFE86] hover:drop-shadow-[0_0_8px_rgba(254,254,134,0.6)]">
+              <a
+                href="https://dalton-life.gitbook.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-dalton-semibold text-white transition-all duration-300 text-lg uppercase tracking-wide flex items-center gap-2 hover:text-[#FEFE86] hover:drop-shadow-[0_0_8px_rgba(254,254,134,0.6)]"
+              >
                 <Icon icon="hugeicons:court-law" className="w-5 h-5" />
                 Normativa
-              </Link>
-              <span className="text-white text-lg">|</span>
-              <Link to="/contact" className="font-dalton-semibold text-white transition-all duration-300 text-lg uppercase tracking-wide flex items-center gap-2 hover:text-[#FEFE86] hover:drop-shadow-[0_0_8px_rgba(254,254,134,0.6)]">
-                <Icon icon="line-md:phone-call-loop" className="w-5 h-5" />
-                Contacto
-              </Link>
+              </a>
             </div>
           </div>
           <div className="flex items-center space-x-6">
