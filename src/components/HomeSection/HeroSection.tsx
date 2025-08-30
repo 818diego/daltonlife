@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
-import ImageSection from '@/assets/test.png';
+import ImageSection from '@/assets/isotipoColor.png';
 import CardInfo from '@/components/HomeSection/CardInfo';
 
 const HeroSection: React.FC = () => {
@@ -31,13 +31,13 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-96 lg:h-[500px] overflow-hidden">
               <img
                 src={ImageSection}
                 alt="Dalton Life"
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover drop-shadow-2xl "
               />
-              <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
+              <div className="absolute inset-0"></div>
             </div>
           </div>
         </div>
