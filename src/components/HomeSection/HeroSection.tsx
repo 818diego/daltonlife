@@ -65,6 +65,17 @@ const HeroSection: React.FC = () => {
             />
           </div>
         </div>
+        <div className="flex justify-center mt-20">
+          <div className="flex flex-col items-center space-y-2 animate-bounce">
+            <Icon
+              icon="ph:mouse-scroll-duotone"
+              className="w-6 h-6 text-dalton-primary"
+            />
+            <span className="font-dalton-regular text-sm text-gray-400 uppercase tracking-wider">
+              Scroll para más información
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
