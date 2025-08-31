@@ -30,11 +30,11 @@ const CardInfo: React.FC<CardInfoProps> = ({
     };
 
     return (
-        <div className={`flex items-center justify-center gap-2.5 p-3 bg-dalton-bg-light border border-dalton-stroke rounded ${className}`}>
-            <div className={`w-8 h-8 ${getColorClasses(color)} rounded-full flex items-center justify-center flex-shrink-0`}>
-                <Icon icon={icon} className="w-6 h-6" />
+        <div className={`flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-2.5 p-2 sm:p-3 bg-dalton-bg-light border border-dalton-stroke rounded text-center ${className}`}>
+            <div className={`w-6 h-6 sm:w-8 sm:h-8 ${getColorClasses(color)} rounded-full flex items-center justify-center flex-shrink-0`}>
+                <Icon icon={icon} className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <span className="text-[16px] font-dalton-semibold text-white">{text}</span>
+            <span className="text-xs sm:text-sm lg:text-base font-dalton-semibold text-white leading-tight">{text}</span>
         </div>
     );
 };

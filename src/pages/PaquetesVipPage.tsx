@@ -49,16 +49,16 @@ const PaquetesVipPage: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-dalton-extrabold text-dalton-primary text-center mb-2 uppercase">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-dalton-extrabold text-dalton-primary text-center mb-2 uppercase">
             Paquetes VIP
           </h1>
-          <p className="font-dalton-regular text-lg text-gray-100 max-w-3xl mx-auto">
+          <p className="font-dalton-regular text-base sm:text-lg text-gray-100 max-w-3xl mx-auto px-4">
             Si deseas disfrutar de beneficios exclusivos, nuestros paquetes VIP te ofrecen acceso a premios exclusivos y una mejor experiencia en el servidor.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <CardVip
             title="Paquete Inicial"
             price={0}

@@ -9,9 +9,22 @@ const MouseAnimation: React.FC = () => {
   const [initialized, setInitialized] = useState(hasLast);
   const [isVisible, setIsVisible] = useState(hasLast);
   const [isClickable, setIsClickable] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [, force] = useState(0);
 
   useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
     let rafId = 0;
     if (hasLast) {
       xRef.current = LAST_POS.x;
@@ -65,7 +78,8 @@ const MouseAnimation: React.FC = () => {
       document.removeEventListener("pointerenter", handleEnter);
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, []);
+  }, [isMobile]);
+  if (isMobile) return null;
 
   const baseStyle: React.CSSProperties = {
     position: "fixed",
