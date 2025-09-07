@@ -8,25 +8,25 @@ import FAQSection from '@/components/HomeSection/FAQSection';
 const HomePage: React.FC = () => {
   const carouselImages = [
     {
-      src: '/src/assets/carrousel1.png',
+      src: '/images/carrousel1.png',
       alt: 'Sistema de Gimnasio Unico',
       description: 'En Dalton Life, el gimnasio es más que un simple lugar para ejercitarse: es una experiencia única que combina tecnología avanzada con un ambiente inspirador. Nuestro gimnasio está diseñado para ayudarte a alcanzar tus objetivos de salud y bienestar de manera eficiente y motivadora.',
       titleColor: 'text-dalton-primary'
     },
     {
-      src: '/src/assets/carrousel2.png',
+      src: '/images/carrousel2.png',
       alt: 'Sistema de Intercambio',
       description: 'Contamos con una PawnShop unica y exclusiva para que puedas comprar y vender tus items de forma segura y eficiente. Donde tamben podrasn adquirir items para lado oscuro.',
       titleColor: 'text-dalton-primary'
     },
     {
-      src: '/src/assets/carrousel3.png',
+      src: '/images/carrousel3.png',
       alt: 'Nuevos Mapeados',
       description: 'En Dalton life contamos con mapeados poco comunnes y diferentes, donde podras encontrar una experiencia unica y diferente a la que estas acostumbrado. Tambien contamos con mapeados que son muy detallados y realistas, para el que le guste el roleplay mas realista.',
       titleColor: 'text-dalton-primary'
     },
     {
-      src: '/src/assets/carrousel4.png',
+      src: '/images/carrousel4.png',
       alt: 'Identidad Unica y Exclusiva',
       description: 'En Dalton Life contamos con una identidad unica y exclusiva para que puedas disfrutar de una experiencia unica y diferente a la que estas acostumbrado. Nos enfocamos en la calidad y la imagen de nuestro servidor, como una marca que nos representa y nos hace diferentes.',
       titleColor: 'text-dalton-primary'
