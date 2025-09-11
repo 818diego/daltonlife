@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/layouts/Layout';
 import HeroSection from '@/components/HomeSection/HeroSection';
 import ServerSection from '@/components/HomeSection/ServerSection';
@@ -73,6 +74,38 @@ const HomePage: React.FC = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Dalton Life | Roleplay FiveM en Español</title>
+        <meta name="description" content="Servidor FiveM con roleplay inmersivo, economía avanzada, eventos y comunidad activa. Descubre Dalton Life y vive una experiencia única." />
+        <link rel="canonical" href="/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Dalton Life | Roleplay FiveM en Español" />
+        <meta property="og:description" content="Servidor FiveM con roleplay inmersivo, economía avanzada, mapeados únicos y eventos especiales." />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/images/carrousel1.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dalton Life | Roleplay FiveM en Español" />
+        <meta name="twitter:description" content="Únete a una comunidad activa y disfruta de sistemas únicos y eventos." />
+        <meta name="twitter:image" content="/images/carrousel1.png" />
+
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Dalton Life - Inicio",
+            "url": "/",
+            "inLanguage": "es",
+            "description": "Servidor FiveM con roleplay inmersivo, economía avanzada y eventos únicos.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Dalton Life",
+              "url": "/"
+            }
+          }
+        `}</script>
+      </Helmet>
       <HeroSection />
       <ServerSection />
       <ImageCarousel images={carouselImages} />

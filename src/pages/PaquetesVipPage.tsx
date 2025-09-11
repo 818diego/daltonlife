@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/layouts/Layout';
 import CardVip from '@/components/vipPage/CardVip';
 import FAQSection from '@/components/HomeSection/FAQSection';
@@ -49,6 +50,33 @@ const PaquetesVipPage: React.FC = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Paquetes VIP | Dalton Life</title>
+        <meta name="description" content="Conoce los paquetes VIP de Dalton Life: beneficios exclusivos, vehículos, casas y más para mejorar tu experiencia de roleplay en FiveM." />
+        <link rel="canonical" href="/paquetes-vip" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Paquetes VIP | Dalton Life" />
+        <meta property="og:description" content="Beneficios exclusivos para tu experiencia en Dalton Life: vehículos, casas, rangos y más." />
+        <meta property="og:url" content="/paquetes-vip" />
+        <meta property="og:image" content="/images/carrousel2.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Paquetes VIP | Dalton Life" />
+        <meta name="twitter:description" content="Explora nuestros paquetes VIP y disfruta de beneficios únicos en Dalton Life." />
+        <meta name="twitter:image" content="/images/carrousel2.png" />
+
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Paquetes VIP - Dalton Life",
+            "url": "/paquetes-vip",
+            "inLanguage": "es",
+            "description": "Paquetes VIP con beneficios exclusivos para potenciar tu experiencia de roleplay."
+          }
+        `}</script>
+      </Helmet>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-dalton-extrabold text-dalton-primary text-center mb-2 uppercase">
