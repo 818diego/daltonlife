@@ -123,19 +123,6 @@ body {
 
 @import "tailwindcss";
 
-html,
-body,
-a,
-button,
-[role="button"],
-[tabindex],
-input,
-select,
-textarea,
-.clickable {
-  cursor: none !important;
-}
-
 * {
   user-select: none;
   -webkit-user-select: none;
