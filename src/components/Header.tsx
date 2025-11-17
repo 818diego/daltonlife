@@ -56,6 +56,11 @@ const Header: React.FC = () => {
                 Paquetes VIP
               </Link>
               <span className="text-white text-lg">|</span>
+              <Link to="/sobre-nosotros" className="font-dalton-semibold text-white transition-all duration-300 text-lg uppercase tracking-wide flex items-center gap-2 hover:text-[#FEFE86] hover:drop-shadow-[0_0_8px_rgba(254,254,134,0.6)]">
+                <Icon icon="mdi:information" className="w-5 h-5" />
+                Sobre Nosotros
+              </Link>
+              <span className="text-white text-lg">|</span>
               <a
                 href="https://dalton-life.gitbook.io/"
                 target="_blank"
@@ -141,6 +146,15 @@ const Header: React.FC = () => {
               >
                 <Icon icon="hugeicons:package" className="w-5 h-5" />
                 Paquetes VIP
+              </Link>
+
+              <Link
+                to="/sobre-nosotros"
+                onClick={() => toggleMobileMenu()}
+                className="block font-dalton-semibold text-white transition-all duration-300 text-lg uppercase tracking-wide flex items-center gap-3 hover:text-[#FEFE86] hover:bg-white/5 px-4 py-2 rounded-lg"
+              >
+                <Icon icon="mdi:information" className="w-5 h-5" />
+                Sobre Nosotros
               </Link>
 
               <a
