@@ -37,44 +37,26 @@ const Tooltip: React.FC<TooltipProps> = ({
 
     const triggerRect = triggerRef.current.getBoundingClientRect();
     const tooltipRect = tooltipRef.current.getBoundingClientRect();
-    const scrollY = window.scrollY;
-    const scrollX = window.scrollX;
 
     let top = 0;
     let left = 0;
 
     switch (position) {
       case "top":
-        top = triggerRect.top + scrollY - tooltipRect.height - 8;
-        left =
-          triggerRect.left +
-          scrollX +
-          triggerRect.width / 2 -
-          tooltipRect.width / 2;
+        top = triggerRect.top - tooltipRect.height - 8;
+        left = triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2;
         break;
       case "bottom":
-        top = triggerRect.bottom + scrollY + 8;
-        left =
-          triggerRect.left +
-          scrollX +
-          triggerRect.width / 2 -
-          tooltipRect.width / 2;
+        top = triggerRect.bottom + 8;
+        left = triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2;
         break;
       case "left":
-        top =
-          triggerRect.top +
-          scrollY +
-          triggerRect.height / 2 -
-          tooltipRect.height / 2;
-        left = triggerRect.left + scrollX - tooltipRect.width - 8;
+        top = triggerRect.top + triggerRect.height / 2 - tooltipRect.height / 2;
+        left = triggerRect.left - tooltipRect.width - 8;
         break;
       case "right":
-        top =
-          triggerRect.top +
-          scrollY +
-          triggerRect.height / 2 -
-          tooltipRect.height / 2;
-        left = triggerRect.right + scrollX + 8;
+        top = triggerRect.top + triggerRect.height / 2 - tooltipRect.height / 2;
+        left = triggerRect.right + 8;
         break;
     }
 
@@ -84,9 +66,9 @@ const Tooltip: React.FC<TooltipProps> = ({
     if (left + tooltipRect.width > window.innerWidth - margin) {
       left = window.innerWidth - tooltipRect.width - margin;
     }
-    if (top < margin + scrollY) top = margin + scrollY;
-    if (top + tooltipRect.height > window.innerHeight + scrollY - margin) {
-      top = window.innerHeight + scrollY - tooltipRect.height - margin;
+    if (top < margin) top = margin;
+    if (top + tooltipRect.height > window.innerHeight - margin) {
+      top = window.innerHeight - tooltipRect.height - margin;
     }
 
     setTooltipPosition({ top, left });

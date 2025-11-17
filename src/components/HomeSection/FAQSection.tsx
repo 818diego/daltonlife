@@ -76,7 +76,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                             >
                                 <button
                                     onClick={() => toggleFAQ(index)}
-                                    className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 text-left flex items-center justify-between hover:bg-[#9a40ce] transition-all duration-300"
+                                    className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 text-left flex items-center justify-between hover:bg-[#9a40ce] transition-all duration-300 cursor-pointer"
                                 >
                                     <div className="flex items-center gap-3 sm:gap-4">
                                         {faq.icon && (

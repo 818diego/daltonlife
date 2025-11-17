@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
+import Tooltip from "@/components/Tooltip";
 
 interface TimeLeft {
   days: number;
@@ -74,15 +75,19 @@ const CountdownTimer: React.FC = () => {
         ? 'translate-y-0 opacity-100'
         : 'translate-y-full opacity-0'
     }`}>
-      <div className="bg-[#1c1c1c]/95 backdrop-blur-md border border-dalton-stroke rounded-lg shadow-2xl overflow-hidden w-64 sm:w-80">
+      <div className="bg-[#1c1c1c]/95 backdrop-blur-md border border-dalton-stroke rounded-lg shadow-2xl w-64 sm:w-80">
         <div className="relative px-3 py-3 sm:px-4 sm:py-3.5">
-          <button
-            onClick={handleClose}
-            className="absolute top-2 right-2 text-white/70 hover:text-white transition-all duration-300 hover:bg-white/10 rounded-full p-1"
-            aria-label="Cerrar cuenta regresiva"
-          >
-            <Icon icon="line-md:close" className="w-4 h-4" />
-          </button>
+          <div className="absolute top-2 right-2 z-50">
+            <Tooltip content="Cerrar" position="top">
+              <button
+                onClick={handleClose}
+                className="text-white/70 hover:text-white transition-all duration-300 hover:bg-white/10 rounded-full p-1 cursor-pointer"
+                aria-label="Cerrar cuenta regresiva"
+              >
+                <Icon icon="line-md:close" className="w-4 h-4" />
+              </button>
+            </Tooltip>
+          </div>
 
           <div className="flex flex-col items-center text-center">
             <h3 className="font-dalton-bold text-white text-base sm:text-lg uppercase tracking-wide mb-2.5 sm:mb-3">
