@@ -23,7 +23,6 @@ const CountdownTimer: React.FC = () => {
   const [isAnimatingIn, setIsAnimatingIn] = useState(false);
 
   useEffect(() => {
-    // Animación inicial de entrada
     setTimeout(() => {
       setIsAnimatingIn(true);
     }, 100);

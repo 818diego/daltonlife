@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import logo from '@/assets/logoBlanco.png';
 import Tooltip from '@/components/Tooltip';
+import { useNotification } from '@/utils/Notification/NotificationContext';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { showNotification } = useNotification();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,10 @@ const Header: React.FC = () => {
       setIsMobileMenuOpen(true);
       setTimeout(() => setIsAnimating(false), 300);
     }
+  };
+
+  const handleLoginClick = () => {
+    showNotification('Esta función está en desarrollo. ¡Pronto podrás entrar!', 'warning', 5000);
   };
 
   return (
@@ -89,7 +95,10 @@ const Header: React.FC = () => {
                 <Icon icon="lucide:store" className="w-6 h-6" />
               </a>
             </Tooltip>
-            <button className="flex items-center py-2 bg-[#FEFE86] text-black font-dalton-bold px-6 py-0 rounded-[4px] transition-all duration-300 hover:bg-[#7C40A0] hover:text-white hover:border-[#7C40A0] hover:drop-shadow-[0_0_4px_rgba(124,64,160,0.6)] uppercase">
+            <button 
+              onClick={handleLoginClick}
+              className="flex items-center py-2 bg-[#FEFE86] text-black font-dalton-bold px-6 py-0 rounded-[4px] transition-all duration-300 hover:bg-[#7C40A0] hover:text-white hover:border-[#7C40A0] uppercase cursor-pointer"
+            >
               <Icon icon="line-md:account" className="w-5 h-5 mr-2" />
               Login
             </button>
@@ -169,7 +178,10 @@ const Header: React.FC = () => {
               </a>
 
               <div className="pt-4 border-t border-white/20">
-                <button className="w-full flex items-center justify-center py-3 bg-[#FEFE86] text-black font-dalton-bold px-6 rounded-[4px] transition-all duration-300 hover:bg-[#7C40A0] hover:text-white hover:border-[#7C40A0] hover:drop-shadow-[0_0_4px_rgba(124,64,160,0.6)] uppercase transform hover:scale-105">
+                <button 
+                  onClick={handleLoginClick}
+                  className="w-full flex items-center justify-center py-3 bg-[#FEFE86] text-black font-dalton-bold px-6 rounded-[4px] transition-all duration-300 hover:bg-[#7C40A0] hover:text-white hover:border-[#7C40A0] hover:drop-shadow-[0_0_4px_rgba(124,64,160,0.6)] uppercase transform hover:scale-105 cursor-pointer"
+                >
                   <Icon icon="line-md:account" className="w-5 h-5 mr-2" />
                   Login
                 </button>
